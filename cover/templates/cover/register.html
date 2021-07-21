@@ -1,0 +1,31 @@
+{% extends 'cover/index.html' %} 
+{% block title %} Register {% endblock  %} 
+{% block body %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+<div>
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-5">
+                <div class="card1">
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line py-5"> <img src="/static/assets/thank2.jpg" class="image"> </div>
+                </div>
+                <div class=" text-center"> 
+                    Already have an account? <a class="m-xl-1" style="color: red" href="/login">Login here</a>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button class="btn btn-primary" style="margin-top: 10px;" type="submit" name="Create User">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock  %}

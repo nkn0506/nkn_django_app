@@ -1,0 +1,58 @@
+{% extends 'cover/index.html' %} 
+{% block title %} Works {% endblock  %} 
+{% block body %}
+{% load bootstrap_icons %}
+<div>
+<div>
+<div class="bg-dark text-light px-4 py-5 text-center" style="margin-top: 10px">
+   <div class="py-5">
+      <h1 class="display-5 fw-bold text-light" style="margin-bottom: 50px">India's Most Trusted and Transparent Crowdfunding Platform   <p class="pb-2 border-bottom" style="margin-top: 3px"</p> </h1>
+      <div class="col-lg-6 mx-auto">
+         <p class="fs-5 mb-4" style="color: #BAE7FF  ">DonateIndia is a unique platform that allows organizations and NGO's to create campaigns for their ongoing projects.The process of donation is extremely convenient and is the same as online funding. Poor people, orphan children as well as labours who are suffering alot in this ongoing pandemic..</p>
+         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Har8ceOvWVEWmZ" async> </script> </form>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="b-example-divider"></div>
+<div style="background-color: #FF9C23">
+<section id="how-dk-works" class="orange-area _2o-ofOAxBpOUKKbEGneFh_">
+   <div class="container" style="margin-bottom: 20px">
+      <div class="row">
+         <div class="col-xs-12 section-heading">
+            <h2 style="text-align: center;margin-top: 30px">How DonateIndia works?</h2>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-3 col-sm-6">
+            {% comment %} <p><img src="images/how-1-choose-a-cause.png" class="gm-added gm-observing gm-observing-cb" loading="lazy"></p> {% endcomment %}
+            {% bs_icon 'card-checklist' size='3em' color='black'%}
+            <h3>Choose a cause</h3>
+            <p>How Poverty causes the poor to suffer emotionally and spiritually</p>
+         </div>
+         <div class="col-md-3 col-sm-6">
+            {% comment %} <p><img src="images/how-2-select-products.png" class="gm-added gm-observing gm-observing-cb" loading="lazy"></p> {% endcomment %}
+            {% bs_icon 'hand-index-thumb' size='3em' color='black'%}
+            <h3>Click on Donate Button</h3>
+            <p>Checkout and pay for your contributions</p>
+         </div>
+         <div class="col-md-3 col-sm-6">
+            {% comment %} <p><img src="images/how-3-order-processing.png" class="gm-added gm-observing gm-observing-cb" loading="lazy"></p> {% endcomment %}
+            {% bs_icon 'credit-card-2-front' size='3em' color='black'%}
+            <h3>Make Payment</h3>
+            <p>Your payment done after processing</p>
+         </div>
+         <div class="col-md-3 col-sm-6">
+            {% comment %} <p><img src="images/how-4-delivery-report.png" class="gm-added gm-observing gm-observing-cb" loading="lazy"></p> {% endcomment %}
+            {% bs_icon 'envelope' size='3em' color='black'%}
+            <h3>Donation report</h3>
+            <p>Checkout email for confirmation of donation</p>
+         </div>
+      </div>
+   </div>
+</section>
+</div>
+{% endblock  %}

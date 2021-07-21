@@ -1,0 +1,45 @@
+{% extends 'cover/index.html' %} 
+{% block title %} Contact {% endblock  %} 
+{%  block body %} 
+
+<div>
+   <div class="wrapper">
+      <div class="overlay">
+         <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-10 ">
+               <div class="contact-us text-center">
+                  <h1 class="touch">Get in touch</h1>
+                  <p class="mb-5" style="margin-top: 25px;font-family: Optima, sans-serif;">Want to get in touch? We'd love to hear from you. Here is how you can reach us...</p>
+                  <div class="col-md-5" style="margin-left: 364px">
+                     <div class="" px-1">
+                        <form method="post" action="/contact/">
+                           {% csrf_token %}
+                           <div class="form-group">
+                              <label for="name"> Name</label>
+                              <input type="text" class="form-control space" id="name" name="name" placeholder="Enter your Name"style="margin-top: 10px; margin-bottom: 10px">
+                           </div>
+                           <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input type="email" class="form-control space" id="email" name="email" placeholder="Enter Your Email" style="margin-top: 10px;margin-bottom: 10px">
+                           </div>
+                           <div class="form-group">
+                              <label for="phone">Phone Number</label>
+                              <input type="phone" class="form-control space" id="phone" name="phone" placeholder="Enter Your Phone Number" style="margin-top: 10px;margin-bottom: 10px">
+                           </div>
+                           <div class="form-group">
+                              <label for="desc">Tell me about what you want to contact me for...</label>
+                              <textarea class="form-control space" id="desc" rows="3" name="desc" style="margin-top: 10px;margin-bottom: 10px"></textarea>
+                           </div>
+                           <button class="btn btn-primary" style="margin-top: 10px;" type="submit">Submit</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+{% endblock  %}

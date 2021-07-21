@@ -1,0 +1,28 @@
+{% extends 'cover/index.html' %} 
+{% block title %} Login {% endblock  %} 
+{% block body %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+<div>
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line py-5"> <img src="/static/assets/loginn.jpg" class="image"> </div>
+                </div>
+            </div>
+            <div class="col-lg-6 py-5">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="row mt-4 mb-4 px-3"> <button type="submit" class="btn btn-blue text-center">Login</button> </div>
+                    <div class="row mb-4 px-2"> <small class="font-weight-bold" style="color: black">Don't have an account?<a class="text-danger px-2" href="/register">register</a></small> </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
